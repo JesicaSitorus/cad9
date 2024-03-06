@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dokumen</title>
+</head>
+<body>
+<canvas id="mycanvas" width="300px" height="200px" style="border:1px solid #000000;"></canvas>
+<script>
+const canvas = document.getElementById("mycanvas");
+const ctx = canvas.getContext("2d");
+
+// Mulai gambar segi delapan
+ctx.beginPath();
+ctx.moveTo(100, 50); // Mulai dari titik awal
+
+// Gambar garis-garis untuk membentuk segi delapan
+ctx.lineTo(150, 20);
+ctx.lineTo(200, 50);
+ctx.lineTo(200, 100);
+ctx.lineTo(150, 130);
+ctx.lineTo(100, 100);
+ctx.lineTo(100, 50); // Kembali ke titik awal untuk menutup segi delapan
+
+// Selesai gambar segi delapan
+ctx.closePath();
+ctx.stroke();
+</script>
+</body>
+</html>

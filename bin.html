@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="500px" height="500px" 
+    style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("mycanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Move to the starting point of the first line
+        ctx.beginPath();
+        ctx.moveTo(250, 50);
+
+        // Draw lines to create the star shape
+        ctx.lineTo(325, 175);
+        ctx.lineTo(475, 200);
+        ctx.lineTo(375, 275);
+        ctx.lineTo(400, 425);
+        ctx.lineTo(250, 350);
+        ctx.lineTo(100, 425);
+        ctx.lineTo(125, 275);
+        ctx.lineTo(25, 200);
+        ctx.lineTo(175, 175);
+        ctx.lineTo(250, 50);
+
+        // Close the path
+        ctx.closePath();
+
+        // Stroke the path to draw it
+        ctx.stroke();
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="500px" height="500px" 
+    style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("mycanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(270, 60); // Move to the top center
+        ctx.lineTo(200, 300); // Draw line to bottom left
+        ctx.lineTo(350, 150); // Draw line to bottom right
+        ctx.lineTo(200, 150); // Draw line to top left
+        ctx.lineTo(350, 300); // Draw line to top right
+        ctx.closePath(); // Close the path
+        ctx.stroke(); // Stroke the path to draw it
+    </script>
+</body>
+</html>
